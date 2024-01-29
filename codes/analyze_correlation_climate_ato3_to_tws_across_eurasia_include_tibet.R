@@ -16,11 +16,11 @@ analyze_correlation_climate_ato3_to_tws_across_eurasia_include_tibet <- function
   library(data.table)
   library(ggsci)
 
-  prato = as.data.frame(fread('output_rebuttal/prato.csv'))
-  evaato = as.data.frame(fread('output_rebuttal/evaato.csv'))
-  pmeato = as.data.frame(fread('output_rebuttal/pmeato.csv'))
-  tws_tibet = as.data.frame(fread('output_rebuttal/tws_tibet.csv'))
-  tws_sr = as.data.frame(fread('output_rebuttal/tws_srs.csv'))
+  prato = as.data.frame(fread('data/prato.csv'))
+  evaato = as.data.frame(fread('data/evaato.csv'))
+  pmeato = as.data.frame(fread('data/pmeato.csv'))
+  tws_tibet = as.data.frame(fread('data/tws_tibet.csv'))
+  tws_sr = as.data.frame(fread('data/tws_srs.csv'))
   
   stand_trend_fun<-function(x){
     x = ts(x,start = c(2003,1),frequency = 12)
