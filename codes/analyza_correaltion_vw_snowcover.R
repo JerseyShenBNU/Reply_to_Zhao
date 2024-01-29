@@ -1,8 +1,8 @@
 analyza_correaltion_vw_snowcover <- function(
 ){
   
-  input_w1 = 'output_rebuttal/uploads/data/vertical_velocity_tpm1.csv'
-  input_w2 = 'output_rebuttal/uploads/data/vertical_velocity_tpm2.csv'
+  input_w1 = 'data/vertical_velocity_tpm1.csv'
+  input_w2 = 'data/vertical_velocity_tpm2.csv'
 
   stpm1_w_box = as.data.frame(fread(input_w1))
   stpm2_w_box = as.data.frame(fread(input_w2))
@@ -17,7 +17,7 @@ analyza_correaltion_vw_snowcover <- function(
     stpm2vw = stpm2_w_box[,i]
     
   
-    snowcover = as.data.frame(fread('output_rebuttal/uploads/data/snowcover.csv'))
+    snowcover = as.data.frame(fread('data/snowcover.csv'))
     snowcover = snowcover[,1:2]
     
     
@@ -165,7 +165,7 @@ analyza_correaltion_vw_snowcover <- function(
     xlab("Time")+
     ylab('Standardized indices')
     
-  output_fig = 'output_rebuttal/fig/relation_w_snowcover2.pdf'
+  output_fig = 'fig/relation_w_snowcover2.pdf'
   ggsave(output_fig,plot = pline,dpi = 800,
          width = 18,height = 12,units = 'cm')
     

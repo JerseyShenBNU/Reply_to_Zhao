@@ -485,7 +485,7 @@ analyze_correlation_climate_ato3_to_tws_across_eurasia_include_tibet <- function
                       rel_heights = c(1,1),
                       rel_widths =  c(1,1))
   
-  output = 'output_rebuttal/fig'
+  output = 'fig'
   dir.create(output)
   output1 = paste0(output,'/fig_correaltion.pdf')
   output2 = paste0(output,'/fig_correaltion_label.pdf')
